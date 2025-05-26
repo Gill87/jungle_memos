@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "750522534385",
+    "project_id": "jungle-7bb06",
+    "storage_bucket": "jungle-7bb06.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750522534385:android:7006920776646a87379c50",
+        "android_client_info": {
+          "package_name": "com.example.jungle_memos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNRKLEftIPBt2mvLL1hgHxAcT8DXiGmqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
