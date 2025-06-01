@@ -73,6 +73,7 @@ class AuthCubit extends Cubit<AuthState>{
     authRepo.logout();
     emit(Unauthenticated());
     print("Current state in cubit: $state");
+    print("logging out");
   }
   
 }

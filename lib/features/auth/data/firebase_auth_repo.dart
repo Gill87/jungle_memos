@@ -91,6 +91,11 @@ class FirebaseAuthRepo implements AuthRepo{
 
     // Fetch user document from firestore
     DocumentSnapshot userDoc = await firebaseFirestore.collection('users').doc(firebaseUser.uid).get();
+    
+    if (!userDoc.exists) {
+      print("No such user document for uid");
+      return null;  // Or handle however you want
+    }
 
     return AppUser(
       username: firebaseUser.uid, 

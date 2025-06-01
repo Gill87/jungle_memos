@@ -29,7 +29,7 @@ class ProfileUser extends AppUser {
     return ProfileUser(
       username: username, 
       email: email, 
-      name: name, 
+      name: name,
       bio: newBio ?? bio, 
       profileImageUrl: newProfileImageUrl ?? profileImageUrl,
       followers: newFollowers ?? followers,
