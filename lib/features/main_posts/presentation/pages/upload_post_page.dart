@@ -1,5 +1,6 @@
+// ...existing code...
 import 'dart:io';
-import 'package:file_picker/file_picker.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -22,11 +23,13 @@ class _UploadPostPage extends State<UploadPostPage> {
   // Current User
   AppUser? currentUser;
 
-  // Mobile Image Pick
-  PlatformFile? imagePickedFile;
+  // Mobile Image Pick (using image_picker)
+  XFile? imagePickedFile;
 
   // Text Controller for caption
   final textController = TextEditingController();
+
+  final ImagePicker _picker = ImagePicker();
 
 
   @override
@@ -42,23 +45,27 @@ class _UploadPostPage extends State<UploadPostPage> {
     currentUser = authCubit.currentUser;
   }
 
-  // Pick Image - Taken from EditProfilePage
-  Future <void> pickImage() async {
-    final result = await FilePicker.platform.pickFiles(
-      type: FileType.image,
-    );
-
-    if(result != null){
-      setState(() {
-        imagePickedFile = result.files.first;
-      });
+  // Pick Image - use image_picker for mobile gallery
+  Future<void> pickImage() async {
+    try {
+      final picked = await _picker.pickImage(source: ImageSource.gallery, imageQuality: 85);
+      if (picked != null) {
+        setState(() {
+          imagePickedFile = picked;
+        });
+        print("PATH: ${imagePickedFile?.path}");
+      } else {
+        print("Image pick canceled");
+      }
+    } catch (e) {
+      print("Error picking image: $e");
     }
   }
 
   // Create & Upload Post
   void uploadPost() {
 
-    // Check both image and caption are provide,d
+    // Check both image and caption are provided
     if(imagePickedFile == null || textController.text.isEmpty){
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Both image and caption are required"))
@@ -138,18 +145,19 @@ class _UploadPostPage extends State<UploadPostPage> {
           children: [
             
             // image preview for mobile
-            if(imagePickedFile != null)
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: double.infinity,
-                    height: 400,
-                    child: Image.file(
-                      File(imagePickedFile!.path!),
-                      fit: BoxFit.fitWidth
-                    ),
+            if (imagePickedFile != null)
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  width: double.infinity,
+                  height: 400,
+                  child: Image.file(
+                    File(imagePickedFile!.path),
+                    fit: BoxFit.cover,
                   ),
                 ),
+              ),
+
               
             const SizedBox(height: 2),
 
