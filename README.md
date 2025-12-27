@@ -1,8 +1,8 @@
-Jungle Memos is a full-featured social media application that allows users to create accounts, follow others, post content, like and comment on posts, and discover new users through search. The goal is to create a clean, intuitive, and engaging platform that fosters interaction and communication.
+**Jungle Memos is a full-featured social media application that allows users to create accounts, follow others, post content, like and comment on posts, and discover new users through search. The goal is to create a clean, intuitive, and engaging platform that fosters interaction and communication.**
 
-✨ Features
+✨ **Features**
 
-👤 User Accounts
+👤 **User Accounts**
 
 Secure account creation & authentication
 
@@ -10,7 +10,7 @@ Customizable user profiles
 
 View personal posts and follower activity
 
-🤝 Social Connections
+🤝 **Social Connections**
 
 Follow / unfollow other users
 
@@ -18,7 +18,7 @@ View follower and following lists
 
 Personalized feed from followed users
 
-📝 Posting System
+📝 **Posting System**
 
 Create and share memos (posts)
 
@@ -26,7 +26,7 @@ View a live feed of posts
 
 Edit or delete personal posts (if supported in your build)
 
-💬 Engagement
+💬 **Engagement**
 
 Like posts
 
@@ -34,7 +34,7 @@ Comment on posts
 
 Real-time interaction feedback (depending on implementation)
 
-🔍 Search & Discovery
+🔍 **Search & Discovery**
 
 Search for users
 
@@ -42,7 +42,7 @@ View profiles and connect
 
 Explore growing communities
 
-🛠️ Tech Stack
+🛠️ **Tech Stack**
 
 (Modify this to match your actual stack)
 
@@ -54,7 +54,7 @@ Database: Firestore
 
 Authentication: Firebase Authentication
 
-🚀 Getting Started
+🚀 **Getting Started**
 1️⃣ Clone the Repository
 git clone https://github.com/your-org/jungle-memos.git
 cd jungle-memos
@@ -69,20 +69,8 @@ npm run dev
 # or
 yarn dev
 
-📌 Roadmap
 
-🔔 Real-time notifications
-
-🖼️ Media uploads (images, video support)
-
-🧵 Threaded conversations
-
-📱 Mobile app support
-
-🛡️ Moderation tools
-
-🤝 Contributing
-
+🤝 **Contributions**
 Contributions are always welcome!
 
 Fork the repo
@@ -93,7 +81,7 @@ Submit a pull request
 
 Feel free to open an issue for suggestions, bugs, or feature requests.
 
-❤️ Vision
+❤️ **Vision**
 
 Jungle Memos aims to create a connected, expressive, and supportive social platform where everyone has a voice.
 
