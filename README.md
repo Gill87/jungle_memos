@@ -2,6 +2,9 @@
 
 **Jungle Memos is a full-featured social media application that allows users to create accounts, follow others, post content, like and comment on posts, and discover new users through search. The goal is to create a clean, intuitive, and engaging platform that fosters interaction and communication.**
 
+<img width="200" height="500" alt="Screenshot_1766822803" src="https://github.com/user-attachments/assets/d9c64dd2-9251-4c3f-8dc7-54085f583e7e"/>
+<img width="200" height="500" alt="Screenshot_1766823135" src="https://github.com/user-attachments/assets/bb179543-445b-4cdf-aa85-639a6950a77c" />
+
 ## ✨ Features
 
 ### 👤 User Accounts
