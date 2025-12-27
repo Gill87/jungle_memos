@@ -87,4 +87,4 @@ Jungle Memos aims to create a connected, expressive, and supportive social platf
 
 📄 License
 
-Specify your license here (MIT recommended)
+MIT License — feel free to use, modify, and build upon Jungle Memos.
